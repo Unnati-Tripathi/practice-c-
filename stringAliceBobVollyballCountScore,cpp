@@ -1,0 +1,39 @@
+//alice and bob are playing game 
+//chance start from alice
+//jiski chance h vo he agar score kre to score uski team ka add hoga
+//but agar chance change hogii to kisi ka score ni bdhega..
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+    
+    int t;
+    cin>>t;
+    while(t--){
+        int slen;
+        cin>>slen;
+   string s;                    //eg:-AAABB
+   cin>>s;
+   int counta=0,countb=0;
+    char chance='A';                              //starting me chance bhi A ki he hogi
+    for(int i=0;i<s.length();i++){               //traversing whole string
+        if(s[i]!=chance) { //doubt             // if switch hota h to kisi ka score ni bdhega..
+        chance=s[i];
+        continue;
+        }
+        else if(chance=='A'){              //verna simply increase hota rheg..
+            counta++;
+        }
+        else if(chance=='B'){
+            countb++;
+        }
+        
+    }
+    cout<<counta<<" "<<countb<<endl;
+   
+    } 
+}
+//result:-3 1
